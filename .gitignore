@@ -1,4 +1,5 @@
 opencode.json
 *.dc.html
+*.iso
 .DS_Store
 Thumbs.db

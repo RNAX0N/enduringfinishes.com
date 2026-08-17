@@ -1,5 +1,5 @@
 /* =========================================================================
-   Next Vision Painting — landing page behavior
+   Enduring Finishes Painting Co. — landing page behavior
    - Pre-selects a pricing package when a "Choose ___" button is clicked
    - Validates and submits the free-quote form
    - Shows an inline thank-you state (with a mailto fallback)
@@ -15,7 +15,7 @@
   }
 
   // ---- Business contact (single source of truth) ---------------------------
-  var BUSINESS_EMAIL = "quotes@nextvisionpainting.com";
+  var BUSINESS_EMAIL = "quotes@enduringfinishes.com";
 
   // ---- Package pre-selection from pricing cards -----------------------------
   var pkgSelect = document.getElementById("package");
@@ -95,7 +95,7 @@
   function mailtoFallback(d) {
     var subject = "Free Quote Request — " + d.name;
     var body =
-      "New quote request from nextvisionpainting.com\n\n" +
+      "New quote request from enduringfinishes.com\n\n" +
       "Name: " + d.name + "\n" +
       "Phone: " + d.phone + "\n" +
       "Email: " + (d.email || "—") + "\n" +

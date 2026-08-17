@@ -1,0 +1,22 @@
+#cloud-config
+hostname: coolify
+users:
+  - name: deploy
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    shell: /bin/bash
+    # EDIT: paste your public key (contents of ~/.ssh/id_ed25519.pub)
+    ssh_authorized_keys:
+      - ssh-ed25519 REPLACE_ME_PUT_YOUR_PUBLIC_KEY_HERE
+    lock_passwd: true
+ssh_pwauth: false
+disable_root: true
+# EDIT: your timezone, e.g. America/New_York
+timezone: UTC
+package_update: true
+package_upgrade: true
+packages:
+  - curl
+  - ca-certificates
+  - git
+  - htop
+  - qemu-guest-agent
